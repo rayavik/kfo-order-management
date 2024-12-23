@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { authenticate } from "../shopify.server";
 import { getOrderById } from "../libs/graphql/order";
 import { getAllGroupAComments } from "../libs/models/groupAComments";
-import { getAllGroupAitemsStatus } from "../libs/models/GroupAitemsStatus";
+import { getAllGroupAitemsStatus } from "../libs/models/groupAitemsStatus";
 import { getAllOthersGroupComments } from "../libs/models/othersGroupComments";
 import GroupCard from "../components/GroupCard";
 import GroupACard from "../components/GroupACard";
