@@ -1,0 +1,85 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://kfo_admin:EKizwJXPMckQxEu4ACUwUUE9o09CXqQ4@dpg-ct1m4thu0jms73ch2aq0-a.oregon-postgres.render.com/kfo"
+}
+
+model Session {
+  id            String    @id
+  shop          String
+  state         String
+  isOnline      Boolean   @default(false)
+  scope         String?
+  expires       DateTime?
+  accessToken   String
+  userId        BigInt?
+  firstName     String?
+  lastName      String?
+  email         String?
+  accountOwner  Boolean   @default(false)
+  locale        String?
+  collaborator  Boolean?  @default(false)
+  emailVerified Boolean?  @default(false)
+}
+
+model GroupAitemsStatus {
+  id            Int      @id @default(autoincrement())
+  lineItemId    String?
+  inventoryType String?
+  orderId       String?
+  status        String?
+  promiseDate   String?
+  reciveStock   String?
+  readyDate     String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+
+model OthersGroupStatus {
+  id            Int      @id @default(autoincrement())
+  groupName    String?
+  inventoryType String?
+  orderId       String?
+  status        String?
+  promiseDate   String?
+  reciveStock   String?
+  readyDate     String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model GroupAComments {
+  id         Int      @id @default(autoincrement())
+  lineItemId String?
+  orderId    String?
+  admin      Boolean  @default(false)
+  message    String?
+  createdAt  DateTime @default(now())
+  read       Boolean  @default(false)
+}
+
+
+model OthersGroupComments {
+  id         Int      @id @default(autoincrement())
+  groupName String?
+  orderId    String?
+  admin      Boolean  @default(false)
+  message    String?
+  createdAt  DateTime @default(now())
+  read       Boolean  @default(false)
+}
+
+model Discounts{
+ id         Int      @id @default(autoincrement()) 
+ collection String
+ cabinetmaker Float @default(0)
+ trade Float @default(0) 
+ showroom Float @default(0) 
+ retail_guest Float @default(0) 
+}
