@@ -97,7 +97,7 @@ export default function PageComponent() {
       cabinetmaker: 0,
       trade: 0,
       showroom: 0,
-      retail: 0,
+      retail_guest: 0,
     });
     shopify.modal.show("my-modal");
   };
