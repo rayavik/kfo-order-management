@@ -6,7 +6,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://kfo_admin:EKizwJXPMckQxEu4ACUwUUE9o09CXqQ4@dpg-ct1m4thu0jms73ch2aq0-a.oregon-postgres.render.com/kfo"
+  url      = "postgresql://kfodb_user:ia3I3Xstz4PBrrynilIRuBImFAQ9oMju@dpg-ctl4kqbqf0us7385s30g-a.singapore-postgres.render.com/kfodb"
 }
 
 model Session {
